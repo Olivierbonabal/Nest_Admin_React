@@ -1,6 +1,5 @@
 import axios from "axios";
-import React, { SyntheticEvent, useState } from "react";
-// import { Redirect } from "react-router-dom";
+import { SyntheticEvent, useState } from "react";
 import { Navigate } from "react-router-dom";
 
 const Login = () => {

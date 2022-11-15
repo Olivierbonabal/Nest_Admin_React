@@ -91,7 +91,7 @@ const UserEdit = (props: any) => {
             </select>
           </div>
 
-          <button className="btn btn-outline-secondary">Sauvegarder</button>
+          <button className="btn btn-outline-secondary" type="submit">Sauvegarder</button>
         </div>
       </form>
     </Wrapper>

@@ -1,8 +1,12 @@
+import React from 'react';
+
 const Paginator = (props: {
-  page: number;
-  lastPage: number;
-  pageChanged: (page: number) => void;
+  
+  page: number,
+  lastPage: number,
+  pageChanged: (page: number) => void
 }) => {
+
   const next = () => {
     if (props.page < props.lastPage) {
       props.pageChanged(props.page + 1);

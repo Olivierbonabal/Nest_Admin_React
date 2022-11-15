@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect, SyntheticEvent } from 'react';
+import { Navigate } from 'react-router-dom';
 import Wrapper from '../../components/Wrapper';
 import { Permission } from '../../models/permission';
 
@@ -24,6 +25,7 @@ const RoleEdit = (props: any) => {
         )();
     }, []);
 
+
     const check = (id: number) => {
         if (selected.some(s => s === id)) {
             setSelected(selected.filter(s => s !== id));
@@ -32,7 +34,8 @@ const RoleEdit = (props: any) => {
         setSelected([...selected, id]);
     };
 
-    const submit = async (e: SyntheticEvent)=> {
+    
+    const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
 
         await axios.put(`roles/${props.match.params.id}`, {
@@ -43,41 +46,58 @@ const RoleEdit = (props: any) => {
         setRedirect(true);
     };
 
+    if(redirect) {
+        return <Navigate to={"/roles"} />;
+    }
+
 
     return (
         <Wrapper>
-            
-        <form onSubmit={submit}>
-            <div className="mb-3 mt-3 row">
-                <label className="col-sm-2 col-form-label">Name</label>
-                <div className="col-sm-10">
-                    <input className="form-control"
-                           defaultValue={name}
-                           onChange={e => setName(e.target.value)}/>
-                </div>
-            </div>
 
-            <div className="mb-3 row">
-                <label className="col-sm-2 col-form-label">Permissions</label>
-                <div className="col-sm-10">
-                    {permissions.map((p: Permission) => {
-                        return (
-                            <div className="form-check form-check-inline col-3" key={p.id}>
-                                <input className="form-check-input" type="checkbox"
-                                       value={p.id}
-                                       checked={selected.some(s => s === p.id)}
-                                       onChange={() => check(p.id)}
-                                />
-                                <label className="form-check-label">{p.name}</label>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
+            <form onSubmit={submit}>
 
-            <button className="btn btn-outline-secondary">Save</button>
-        </form>
-    </Wrapper>
+                <h2 className="my-3 fw-bold">Modification des Permissions</h2>
+
+                <div className="my-3 w-auto row">
+
+                    <label className="col-sm-2 col-form-label">Nom de l'utilisateur</label>
+
+                    <div className="col-sm-10">
+                        <input className="form-control"
+                            defaultValue={name}
+                            onChange={e => setName(e.target.value)} />
+                    </div>
+
+                </div>
+
+                <div className="mb-3 row">
+
+                    <label className="col-sm-2 col-form-label">Les Autorisations</label>
+
+                    <div className="col-sm-10">
+
+                        {permissions.map((p: Permission) => {
+                            return (
+                                <div className="form-check form-check-inline col-3" key={p.id}>
+                                    <input className="form-check-input" type="checkbox"
+                                        value={p.id}
+                                        checked={selected.some(s => s === p.id)}
+                                        onChange={() => check(p.id)}
+                                    />
+
+                                    <label className="form-check-label">{p.name}</label>
+
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                </div>
+
+                <button className="btn btn-outline-secondary" type="submit">Sauvegarde</button>
+
+            </form>
+        </Wrapper>
     )
 }
 

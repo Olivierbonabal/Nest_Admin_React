@@ -84,7 +84,7 @@ const UserCreate = () => {
             </select>
           </div>
 
-          <button className="mt-3 btn btn-outline-success">Sauvegarder</button>
+          <button className="mt-3 btn btn-outline-success" type="submit">Sauvegarder</button>
         </div>
       </form>
     </Wrapper>
