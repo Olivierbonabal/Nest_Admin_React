@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 //Method hooks
 const Menu = () => {
@@ -12,15 +12,20 @@ const Menu = () => {
         <ul className="nav flex-column">
 
           <li className="nav-item">
-            <Link to={'/'} className="nav-link">Dashboard</Link>
+            <NavLink to={'/'}className="nav-link">
+              DashBoard
+            </NavLink>
           </li>
 
           <li className="nav-item">
-            <Link to={'/users'} className="nav-link">Users</Link>
+            <Link to={'/users'} className="nav-link">
+              Users
+            </Link>
           </li>
 
         </ul>
       </div>
+
     </nav>
   );
 };
