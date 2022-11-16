@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Basket, Gear, PersonCircle, Table } from 'react-bootstrap-icons';
 
 //Method hooks
 const Menu = () => {
@@ -14,24 +15,28 @@ const Menu = () => {
 
           <li className="nav-item">
             <NavLink to={'/'} className="nav-link">
+              <Table/>
               DashBoard
             </NavLink>
           </li>
 
           <li className="nav-item">
             <NavLink to={'/users'} className="nav-link">
+              <PersonCircle/>
               Utilisateurs
             </NavLink>
           </li>
 
           <li className="nav-item">
             <NavLink to={'/roles'} className="nav-link">
+              <Gear/>
               Roles
             </NavLink>
           </li>
 
           <li className="nav-item">
             <NavLink to={'/products'} className="nav-link">
+              <Basket/>
               Produits
             </NavLink>
           </li>

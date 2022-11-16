@@ -11,6 +11,7 @@ import UserCreate from "./pages/users/UserCreate";
 import UserEdit from "./pages/users/UserEdit";
 import Users from "./pages/users/Users";
 import ProductCreate from './pages/products/ProductCreate';
+import ProductEdit from "./pages/products/ProductEdit";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           <Route path={"/roles/edit"} index element={<RoleEdit />} />
           <Route path={"/products"} index element={<Products />} />
           <Route path={"/products/create"} index element={<ProductCreate />} />
-          <Route path={"/products/:id/edit"} index element={<ProductCreate />} />
+          <Route path={"/products/:id/edit"} index element={<ProductEdit />} />
         </Routes>
       </BrowserRouter>
     </div>

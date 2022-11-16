@@ -1,7 +1,6 @@
 import axios from 'axios';
-import React from 'react';
 
-const ImageUpload = async (props: { uploaded: (url: string) => void }) => {
+const ImageUpload =  (props: { uploaded: (url: string) => void }) => {
 
     const upload = async (files: FileList | null) => {
         if (files === null) return;
@@ -16,7 +15,7 @@ const ImageUpload = async (props: { uploaded: (url: string) => void }) => {
 
     return (
         <label className="btn btn-primary">
-            Upload <input type="file" hidden onChange={e => upload(e.target.files)} />
+            Chargement de l'image <input type="file" hidden onChange={e => upload(e.target.files)} />
         </label>
     )
 }

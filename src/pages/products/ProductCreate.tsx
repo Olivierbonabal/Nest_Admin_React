@@ -27,7 +27,7 @@ const ProductCreate = () => {
     };
 
     if (redirect) {
-        return <Navigate to={"/products"} />;
+        return <Navigate to={"/products"}/>;
     }
 
 
@@ -36,7 +36,7 @@ const ProductCreate = () => {
         <Wrapper>
             <form onSubmit={submit}>
 
-            <h2 className="my-3 fw-bold">Création des Produits</h2>
+                <h2 className="my-3 fw-bold">Création des Produits</h2>
 
                 <div className="my-3 w-auto">
                     <label>Titre</label>
@@ -55,11 +55,10 @@ const ProductCreate = () => {
                 <div className="mb-3">
                     <label>Image</label>
                     <div className="input-group">
-                        <input className="form-control"
-                            value={image}
-                            onChange={e => setImage(e.target.value)}
-                        />
-                        <ImageUpload uploaded={setImage}/>
+                        <input className="form-control" value={image} onChange={e => setImage(e.target.value)} />
+
+                        <ImageUpload uploaded={setImage} />
+
                     </div>
                 </div>
 

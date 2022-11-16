@@ -38,7 +38,7 @@ const Products = () => {
 
         <Wrapper>
             <div className="pt-3 pb-2 mb-3 border-bottom">
-                <Link to="/products/create" className="btn btn-sm btn-outline-secondary">Ajouter</Link>
+                <Link to="/products/create" className=" my-3 btn btn-sm btn-outline-secondary">Ajouter</Link>
             </div>
 
             <div className="table-responsive">
@@ -68,7 +68,7 @@ const Products = () => {
                                     <td>
                                         <div className="btn-group mr-2">
                                             <Link to={`/products/${p.id}/edit`}
-                                                className="btn btn-sm btn-outline-secondary">Edit</Link>
+                                                className="btn btn-sm btn-outline-secondary">Editer</Link>
                                             <a href="#" className="btn btn-sm btn-outline-secondary"
                                                 onClick={() => del(p.id)}
                                             >Supprimer</a>
