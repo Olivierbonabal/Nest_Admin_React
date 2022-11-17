@@ -51,7 +51,7 @@ const Orders = () => {
     return (
         <Wrapper>
             <div className="pt-3 pb-2 mb-3 border-bottom">
-                <a href="#" className="btn btn-sm btn-outline-secondary" onClick={handleExport}>Exporter</a>
+                <a href="#" className="btn btn-sm btn-outline-secondary" onClick={handleExport}>Exporter le Ticket</a>
             </div>
 
             <div className="table-responsive">
@@ -77,7 +77,7 @@ const Orders = () => {
                                     <td>
                                         <a href="#" className="btn btn-sm btn-outline-secondary"
                                            onClick={() => select(o.id)}
-                                        >View</a>
+                                        >Vue du Produit</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -87,9 +87,9 @@ const Orders = () => {
                                                 <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Product Title</th>
-                                                    <th>Quantity</th>
-                                                    <th>Price</th>
+                                                    <th>Nom du Produit</th>
+                                                    <th>Quantité</th>
+                                                    <th>Prix</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>

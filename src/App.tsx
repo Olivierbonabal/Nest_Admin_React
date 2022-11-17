@@ -13,6 +13,7 @@ import Users from "./pages/users/Users";
 import ProductCreate from './pages/products/ProductCreate';
 import ProductEdit from "./pages/products/ProductEdit";
 import Orders from './pages/orders/Orders';
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path={"/register"} element={<Register />} />
           <Route path={"/login"} element={<Login />} />
           <Route path={"/users"} element={<Users />} />
+          <Route path={"/profile"} index element={<Profile />} />
           <Route path={"/users/create"} element={<UserCreate />} />
           <Route path={"/users/:id/edit"} element={<UserEdit />} />
           <Route path={"/roles"} index element={<Roles />} />
