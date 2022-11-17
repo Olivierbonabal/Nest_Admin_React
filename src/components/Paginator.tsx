@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowLeftSquare, ArrowRightSquare } from 'react-bootstrap-icons';
 
 const Paginator = (props: {
   
@@ -22,16 +23,21 @@ const Paginator = (props: {
   return (
     <nav>
       <ul className="pagination">
+
         <li className="page-item">
           <a href="#" className="page-link" onClick={prev}>
+            <ArrowLeftSquare/>
             page précédente
           </a>
         </li>
+
         <li className="page-item">
           <a href="#" className="page-link" onClick={next}>
             page suivante
+            <ArrowRightSquare/>
           </a>
         </li>
+
       </ul>
     </nav>
   );

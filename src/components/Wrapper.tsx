@@ -47,6 +47,9 @@ const Wrapper = (props: any) => {
       </div>
     </>
   );
-};
+}
+
+
+
 
 export default Wrapper;

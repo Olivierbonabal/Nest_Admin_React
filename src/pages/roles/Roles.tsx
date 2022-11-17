@@ -29,7 +29,7 @@ const Roles = () => {
     return (
         <Wrapper>
             <div className="pt-3 pb-2 mb-3 border-bottom">
-                <Link to={"/roles/create"} className="my-3 btn btn-sm btn-outline-secondary">Ajouter</Link>
+                <Link to={"/roles/create"} className="my-3 btn btn-sm btn-outline-primary">Ajouter</Link>
             </div>
 
             <div className="table-responsive">
@@ -53,7 +53,7 @@ const Roles = () => {
                                             <Link to={`/roles/${role.id}/edit`}
                                                 className="btn btn-sm btn-outline-secondary">Editer</Link>
 
-                                            <a href="#" className="btn btn-sm btn-outline-secondary"
+                                            <a href="#" className="btn btn-sm btn-outline-danger"
                                                 onClick={() => del(role.id)}
                                             >Supprimer</a>
 

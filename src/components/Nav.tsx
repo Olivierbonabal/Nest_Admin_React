@@ -4,21 +4,13 @@ import { Link } from "react-router-dom";
 import { User } from "../models/user";
 
 const Nav = () => {
-  // //display du user
-
-  // useEffect(() => {
-  //   // axios.get("").then();
-  //   const getUser = async () => {
-  //     const {data} = await axios.get('http://localhost:3000/api/user')
-  //   }
-  //   getUser();
-  // }, []);
 
   const [user, setUser] = useState(new User());
 
   //User ANONYME=====>>
   useEffect(() => {
-    (async () => {
+    (
+      async () => {
       const { data } = await axios.get(
         "user"
         //les cookies plutot ds l'index...
@@ -42,7 +34,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
       <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
-        DashBoard
+        Nest_React 📊 DashBoard 
       </a>
 
       <ul className="my-2 my-md-0 mr-md-3">

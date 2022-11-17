@@ -12,6 +12,7 @@ import UserEdit from "./pages/users/UserEdit";
 import Users from "./pages/users/Users";
 import ProductCreate from './pages/products/ProductCreate';
 import ProductEdit from "./pages/products/ProductEdit";
+import Orders from './pages/orders/Orders';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path={"/products"} index element={<Products />} />
           <Route path={"/products/create"} index element={<ProductCreate />} />
           <Route path={"/products/:id/edit"} index element={<ProductEdit />} />
+          <Route path={"/orders"} index element={<Orders />} />
         </Routes>
       </BrowserRouter>
     </div>
