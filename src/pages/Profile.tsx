@@ -3,7 +3,8 @@ import React, { SyntheticEvent, useEffect, useState } from 'react';
 import Wrapper from "../components/Wrapper";
 import { User } from "../models/user";
 
-const Profile = (props: { user: User, setUser: (user: User) => void }) => {
+// const Profile = (props: { user: User, setUser: (user: User) => void }) => {
+const Profile = (props: { user: User }) => {
 
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');
@@ -28,13 +29,13 @@ const Profile = (props: { user: User, setUser: (user: User) => void }) => {
             email
         });
 
-        props.setUser(new User(
-            data.id,
-            data.first_name,
-            data.last_name,
-            data.email,
-            data.role
-        ));
+        // props.setUser(new User(
+        //     data.id,
+        //     data.first_name,
+        //     data.last_name,
+        //     data.email,
+        //     data.role
+        // ));
        
     }
 
