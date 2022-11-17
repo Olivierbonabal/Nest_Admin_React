@@ -15,6 +15,7 @@ const UserCreate = () => {
   useEffect(() => {
     (async () => {
       const { data } = await axios.get("roles");
+
       setRoles(data);
     })();
   }, []);
@@ -40,6 +41,7 @@ const UserCreate = () => {
   return (
     <Wrapper>
       <form onSubmit={submit}>
+
         <h2 className="my-3 fw-bold">Création d'utilisateurs</h2>
 
         <div className="form-control w-auto mt-3">

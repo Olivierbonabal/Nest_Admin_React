@@ -47,7 +47,9 @@ const UserEdit = (props: any) => {
   return (
     <Wrapper>
       <form onSubmit={submit}>
+
         <h2 className="my-3 fw-bold">Modification des Utilisateurs</h2>
+        
         <div className="form-control w-auto mt-3">
           <div className="mb-3">
             <label>Prenom</label>

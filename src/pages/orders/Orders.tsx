@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Wrapper from "../../components/Wrapper";
 import Paginator from "../../components/Paginator";
 import axios from 'axios';
@@ -25,7 +25,7 @@ const Orders = () => {
     useEffect(() => {
         (
             async () => {
-                const {data} = await axios.get(`orders?page=${page}`);
+                const {data} = await axios.post(`orders?page=${page}`);
 
                 setOrders(data.data);
                 setLastPage(data.meta.last_page);
@@ -40,8 +40,7 @@ const Orders = () => {
     const handleExport = async () => {
         const {data} = await axios.post('export', {}, {responseType: 'blob'});
         const blob = new Blob([data], {type: 'text/csv'});
-        // const url = window.URL.createObjectURL(data);
-        const url = window.URL.createObjectURL(blob);
+        const url = window.URL.createObjectURL(data);
         const link = document.createElement('a');
         link.href = url;
         link.download = 'orders.csv';
@@ -59,7 +58,7 @@ const Orders = () => {
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nom</th>
+                        <th>Name</th>
                         <th>Email</th>
                         <th>Total</th>
                         <th>Action</th>
@@ -77,7 +76,7 @@ const Orders = () => {
                                     <td>
                                         <a href="#" className="btn btn-sm btn-outline-secondary"
                                            onClick={() => select(o.id)}
-                                        >View</a>
+                                        >Vue des produits</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -87,9 +86,9 @@ const Orders = () => {
                                                 <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Product Title</th>
-                                                    <th>Quantity</th>
-                                                    <th>Price</th>
+                                                    <th>Nom du Produit</th>
+                                                    <th>Quantité</th>
+                                                    <th>Prix</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>

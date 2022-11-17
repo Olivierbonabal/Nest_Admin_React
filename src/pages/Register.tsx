@@ -13,28 +13,6 @@ class Register extends Component {
     redirect: false
   };
 
-  // submit = (e: SyntheticEvent) => {
-  //   e.preventDefault();
-
-  //   // console.log({
-  //   //   first_name: this.first_name,
-  //   //   last_name: this.last_name,
-  //   //   email: this.email,
-  //   //   password: this.password,
-  //   //   password_confirm: this.password_confirm,
-  //   // });
-
-  //   axios.post('http://localhost:3000/api/register', {
-  //       first_name: this.first_name,
-  //       last_name: this.last_name,
-  //       email: this.email,
-  //       password: this.password,
-  //       password_confirm: this.password_confirm
-  //   }).then(res => {
-  //       console.log(res);
-  //   })
-
-  // };
   submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 

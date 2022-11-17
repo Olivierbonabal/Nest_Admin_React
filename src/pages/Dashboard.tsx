@@ -31,6 +31,8 @@ const Dashboard = () => {
 
                 const { data } = await axios.get('chart');
 
+                // const records: { date: string, sum: number }[] = response.data.data;
+
                 chart.load({
                     columns: [
                         ['x', ...data.map((r: any) => r.date)],

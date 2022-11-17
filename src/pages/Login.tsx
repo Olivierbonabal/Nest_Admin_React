@@ -12,11 +12,11 @@ const Login = () => {
     e.preventDefault();
 
     //envoie request a nest
-    await axios.post('login', {
+     await axios.post('login', {
             email: email,
-            password: password
+            password: password,
     });
-    // console.log(data);
+
     setRedirect(true);
   };
 
@@ -25,13 +25,6 @@ const Login = () => {
   }
   
   return (
-    // <div className="container">
-    //   <h1>Count {count}</h1>
-    //   <input
-    //     type="number"
-    //     onChange={(e) => setCount(parseInt(e.target.value))}
-    //   />
-    // </div>
     <main className="form-signin">
       <form onSubmit={submit}>
         <h1 className="h3 mb-3 fw-normal">Connexion</h1>

@@ -35,6 +35,7 @@ function App() {
           <Route path={"/products/create"} index element={<ProductCreate />} />
           <Route path={"/products/:id/edit"} index element={<ProductEdit />} />
           <Route path={"/orders"} index element={<Orders />} />
+          <Route path={"/orders/:id"} index element={<Orders/>} />
         </Routes>
       </BrowserRouter>
     </div>

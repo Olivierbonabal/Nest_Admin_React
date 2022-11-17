@@ -1,9 +1,7 @@
 import axios from 'axios';
-import React, {Dispatch, SyntheticEvent, useEffect, useState} from 'react';
+import React, {SyntheticEvent, useEffect, useState} from 'react';
 import Wrapper from "../components/Wrapper";
-import {connect} from "react-redux";
 import {User} from "../models/user";
-import {setUser} from "../redux/actions/setUserAction";
 
 const Profile = (props: { user: User, setUser: (user: User) => void }) => {
     const [first_name, setFirstName] = useState('');
@@ -101,15 +99,4 @@ const Profile = (props: { user: User, setUser: (user: User) => void }) => {
     );
 };
 
-export default connect(
-    (state: { user: User }) => {
-        return {
-            user: state.user
-        };
-    },
-    (dispatch: Dispatch<any>) => {
-        return {
-            setUser: (user: User) => dispatch(setUser(user))
-        }
-    }
-)(Profile);
+export default Profile;

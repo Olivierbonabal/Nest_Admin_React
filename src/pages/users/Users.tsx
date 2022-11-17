@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Paginator from "../../components/Paginator";
 import Wrapper from "../../components/Wrapper";
@@ -80,4 +81,7 @@ const Users = () => {
   );
 };
 
-export default Users;
+// export default Users;
+// @ts-ignore
+export default connect(state => ({user: state.user}))(Users); //=====================
+
