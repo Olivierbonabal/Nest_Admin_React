@@ -4,7 +4,6 @@ import Paginator from "../../components/Paginator";
 import axios from 'axios';
 import {Order} from "../../models/order";
 import {OrderItem} from "../../models/order-item";
-import {Link} from "react-router-dom";
 
 
 const hide = {
@@ -13,7 +12,7 @@ const hide = {
 }
 
 const show = {
-    maxHeight: '150px',
+    maxHeight: '200px',
     transition: '1000ms ease-out'
 }
 
@@ -42,6 +41,7 @@ const Orders = () => {
         const {data} = await axios.post('export', {}, {responseType: 'blob'});
         const blob = new Blob([data], {type: 'text/csv'});
         const url = window.URL.createObjectURL(data);
+        // const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
         link.download = 'orders.csv';
@@ -51,7 +51,7 @@ const Orders = () => {
     return (
         <Wrapper>
             <div className="pt-3 pb-2 mb-3 border-bottom">
-                <a href="#" className="btn btn-sm btn-outline-secondary" onClick={handleExport}>Exporter le Ticket</a>
+                <a href="#" className="btn btn-sm btn-outline-secondary" onClick={handleExport}>Impression du Ticket</a>
             </div>
 
             <div className="table-responsive">
@@ -77,7 +77,7 @@ const Orders = () => {
                                     <td>
                                         <a href="#" className="btn btn-sm btn-outline-secondary"
                                            onClick={() => select(o.id)}
-                                        >Vue du Produit</a>
+                                        >Vue du Ticket</a>
                                     </td>
                                 </tr>
                                 <tr>

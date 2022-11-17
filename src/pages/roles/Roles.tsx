@@ -47,18 +47,20 @@ const Roles = () => {
                                 <tr key={role.id}>
                                     <td>{role.id}</td>
                                     <td>{role.name}</td>
-                                    <td>
-                                        <div className="btn-group mr-2">
 
+                                    <td>
+                                        <div className="btn btn-link">
                                             <Link to={`/roles/${role.id}/edit`}
                                                 className="btn btn-sm btn-outline-secondary">Editer</Link>
+                                        </div>
 
+                                        <div className="btn btn-link">
                                             <a href="#" className="btn btn-sm btn-outline-danger"
                                                 onClick={() => del(role.id)}
                                             >Supprimer</a>
-
                                         </div>
                                     </td>
+                                    
                                 </tr>
                             )
                         })}

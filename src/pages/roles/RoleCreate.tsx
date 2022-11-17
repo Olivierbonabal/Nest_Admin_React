@@ -60,7 +60,7 @@ const RoleCreate = () => {
                 </div>
 
                 <div className="mb-3 row">
-                    <label className="col-sm-2 col-form-label"> Les Autorisations</label>
+                    <label className="col-sm-2 col-form-label">Les Autorisations</label>
                     <div className="col-sm-10">
                         {permissions.map((p: Permission) => {
                             return (

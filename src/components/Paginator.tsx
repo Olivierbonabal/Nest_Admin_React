@@ -25,14 +25,14 @@ const Paginator = (props: {
       <ul className="pagination">
 
         <li className="page-item">
-          <a href="#" className="page-link" onClick={prev}>
+          <a href="#" className="page-link my-3" onClick={prev}>
             <ArrowLeftSquare/>
             page précédente
           </a>
         </li>
 
         <li className="page-item">
-          <a href="#" className="page-link" onClick={next}>
+          <a href="#" className="page-link my-3" onClick={next}>
             page suivante
             <ArrowRightSquare/>
           </a>
