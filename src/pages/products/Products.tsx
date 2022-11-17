@@ -12,7 +12,8 @@ const Products = () => {
   const [lastPage, setLastPage] = useState(0);
 
   useEffect(() => {
-    (async () => {
+    (
+      async () => {
       console.log(page);
       const { data } = await axios.get(`products?page=${page}`);
 

@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export interface ProductImage {
     name: string;
     mimeType: string;
@@ -13,10 +15,10 @@ const ImageUpload = (props: { onImageSelected: (image: File) => void }) => {
         const file = files[0];
         props.onImageSelected(file);
 
-        // const formData = new FormData();
-        // formData.append('image', files[0]);
+        const formData = new FormData();
+        formData.append('image', files[0]);
 
-        // const {data} = await axios.post('upload', formData);
+        const {data} = await axios.post('upload', formData);
 
         // props.uploaded(data.url);
     };

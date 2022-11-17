@@ -6,7 +6,6 @@ import {Order} from "../../models/order";
 import {OrderItem} from "../../models/order-item";
 import {Link} from "react-router-dom";
 
-
 const hide = {
     maxHeight: 0,
     transition: '1000ms ease-in'
@@ -41,7 +40,8 @@ const Orders = () => {
     const handleExport = async () => {
         const {data} = await axios.post('export', {}, {responseType: 'blob'});
         const blob = new Blob([data], {type: 'text/csv'});
-        const url = window.URL.createObjectURL(data);
+        // const url = window.URL.createObjectURL(data);
+        const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
         link.download = 'orders.csv';

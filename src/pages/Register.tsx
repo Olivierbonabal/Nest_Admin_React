@@ -53,25 +53,25 @@ class Register extends Component {
 
   render() {
     if (this.state.redirect) {
-      // return <Redirect to={"/login"} />;
       return <Navigate to={"/login"} />;
     }
 
     return (
       <main className="form-signin">
         <form onSubmit={this.submit}>
+
           <h1 className="h3 mb-2 p-5 fw-normal">Inscription</h1>
 
           <input
             className="form-control"
-            placeholder="First Name"
+            placeholder="Prénom"
             required
             onChange={(e) => (this.first_name = e.target.value)}
           />
 
           <input
             className="form-control"
-            placeholder="Last Name"
+            placeholder="Nom"
             required
             onChange={(e) => (this.last_name = e.target.value)}
           />
@@ -87,7 +87,7 @@ class Register extends Component {
           <input
             type="password"
             className="form-control mt-3"
-            placeholder="Password"
+            placeholder="Mot de Passe"
             required
             onChange={(e) => (this.password = e.target.value)}
           />

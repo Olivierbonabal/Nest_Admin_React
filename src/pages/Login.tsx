@@ -21,7 +21,6 @@ const Login = () => {
   };
 
   if(redirect) {
-      //   return <Redirect to={"/"}/>;
         return <Navigate to={"/"}/>;
   }
   

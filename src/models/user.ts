@@ -10,8 +10,6 @@ export class User {
         public role = new Role()
     ) { }
 
-    get name() {
-        return this.first_name + " " + this.last_name;
-    }
+    get name() { return this.first_name + " " + this.last_name }
 
 }

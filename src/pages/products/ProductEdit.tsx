@@ -68,6 +68,7 @@ const ProductEdit = (props: any) => {
             <input className="form-control" value={image?.name} />
 
             <ImageUpload onImageSelected={setImage} />
+            
           </div>
         </div>
 

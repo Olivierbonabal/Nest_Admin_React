@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
@@ -13,6 +14,7 @@ import Users from "./pages/users/Users";
 import ProductCreate from './pages/products/ProductCreate';
 import ProductEdit from "./pages/products/ProductEdit";
 import Orders from './pages/orders/Orders';
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={"/"} index element={<Dashboard />} />
+          <Route path={"/profile"} element={<Profile />} />
           <Route path={"/register"} element={<Register />} />
           <Route path={"/login"} element={<Login />} />
           <Route path={"/users"} element={<Users />} />

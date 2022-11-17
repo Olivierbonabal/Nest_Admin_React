@@ -15,17 +15,17 @@ const Menu = () => {
 
           <li className="nav-item">
             <NavLink to={'/'} className="nav-link">
-            <div className="gap-3">
-              <Table color="red" size={20} className="my-2"/>
+              <div className="gap-3">
+                <Table color="red" size={20} className="my-2" />
               </div>
-              DashBoard
+              Tableau de Bord
             </NavLink>
           </li>
 
           <li className="nav-item">
             <NavLink to={'/users'} className="nav-link">
-            <div className="gap-3">
-              <PersonCircle color="red" size={20} className="my-2"/>
+              <div className="gap-3">
+                <PersonCircle color="red" size={20} className="my-2" />
               </div>
               Utilisateurs
             </NavLink>
@@ -33,8 +33,8 @@ const Menu = () => {
 
           <li className="nav-item">
             <NavLink to={'/roles'} className="nav-link">
-            <div className="gap-3">
-              <Gear color="red" size={20} className="my-2"/>
+              <div className="gap-3">
+                <Gear color="red" size={20} className="my-2" />
               </div>
               Attribution des Roles
             </NavLink>
@@ -42,8 +42,8 @@ const Menu = () => {
 
           <li className="nav-item">
             <NavLink to={'/products'} className="nav-link">
-            <div className="gap-3">
-              <Basket color="red" size={20} className="my-2"/>
+              <div className="gap-3">
+                <Basket color="red" size={20} className="my-2" />
               </div>
               Les Produits
             </NavLink>
@@ -51,8 +51,8 @@ const Menu = () => {
 
           <li className="nav-item">
             <NavLink to={'/orders'} className="nav-link">
-            <div className="gap-3">
-              <ClipboardData color="red" size={20} className="my-2"/>
+              <div className="gap-3">
+                <ClipboardData color="red" size={20} className="my-2" />
               </div>
               Les Commandes
             </NavLink>
