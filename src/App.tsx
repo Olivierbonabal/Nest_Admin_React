@@ -13,7 +13,7 @@ import Users from "./pages/users/Users";
 import ProductCreate from './pages/products/ProductCreate';
 import ProductEdit from "./pages/products/ProductEdit";
 import Orders from './pages/orders/Orders';
-// import Profile from "./pages/Profile";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={"/"} index element={<Dashboard />} />
+          {/* <Route path={"/profile"} index element={<Profile />} /> */}
           <Route path={"/register"} element={<Register />} />
           <Route path={"/login"} element={<Login />} />
-          {/* <Route path={"/profile"} index element={<Profile />} /> */}
           <Route path={"/users"} element={<Users />} />
           <Route path={"/users/create"} element={<UserCreate />} />
           <Route path={"/users/:id/edit"} element={<UserEdit />} />

@@ -3,8 +3,7 @@ import React, { SyntheticEvent, useEffect, useState } from 'react';
 import Wrapper from "../components/Wrapper";
 import { User } from "../models/user";
 
-// const Profile = (props: { user: User, setUser: (user: User) => void }) => {
-const Profile = (props: { user: User }) => {
+const Profile = (props: { user: User, setUser: (user: User) => void }) => {
 
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');
