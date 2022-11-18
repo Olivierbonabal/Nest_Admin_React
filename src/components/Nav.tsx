@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { PersonCircle } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import { User } from "../models/user";
 
@@ -39,11 +40,10 @@ const Nav = () => {
 
       <ul className="my-2 my-md-0 mr-md-3">
         <Link className="p-2 text-white" to={"/profile"}>
-
           {/* {user?.first_name} {user?.last_name} */}
           {/* Faire 1 models */}
-          
           {user.name}
+              <PersonCircle color="green" size={20} className="my-2"/>
         </Link>
 
         <Link
@@ -53,6 +53,7 @@ const Nav = () => {
         >
           Deconnexion
         </Link>
+
       </ul>
     </nav>
   );

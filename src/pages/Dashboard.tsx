@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Wrapper from "../components/Wrapper";
 import * as c3 from 'c3';
 import axios from 'axios';
@@ -76,9 +76,10 @@ const Dashboard = () => {
         <Wrapper>
 
             <div className='my-3'>
-                <h2>Ventes du Jour</h2>
+                <h2>Ventes du Jour (/commandes clients)</h2>
             </div>
             <div id="chart" />
+
         </Wrapper>
     )
 }

@@ -10,7 +10,6 @@ export interface ProductImage {
 }
 
 const ImageUpload = (props: { onImageSelected: (image: File) => void }) => {
-    // const ImageUpload = (props: { uploaded: (url: string) => void }) => {
     const upload = async (files: FileList | null) => {
         if (files === null) return;
 

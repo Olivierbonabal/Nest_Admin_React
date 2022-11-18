@@ -21,7 +21,6 @@ const Login = () => {
   };
 
   if(redirect) {
-      //   return <Redirect to={"/"}/>;
         return <Navigate to={"/"}/>;
   }
   
@@ -35,7 +34,7 @@ const Login = () => {
     // </div>
     <main className="form-signin">
       <form onSubmit={submit}>
-        <h1 className="h3 mb-3 fw-normal">Connexion</h1>
+        <h1 className="h3 my-3 fw-normal">Connexion</h1>
 
         <input
           type="email"
@@ -57,10 +56,11 @@ const Login = () => {
           Se Connecter
         </button>
 
-        <p className="mt-2 p-5 text-muted">&copy; 2021–2022🚀OlivierBonabal</p>
+        <p className="mt-2 p-5 text-dark">&copy; 2021–2022🚀OlivierBonabal</p>
       </form>
     </main>
   );
 };
 
 export default Login;
+

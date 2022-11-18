@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Basket, ClipboardData, Gear, PersonCircle, Table } from 'react-bootstrap-icons';
+import { Basket, ClipboardData, Gear, People, PersonCircle, Table } from 'react-bootstrap-icons';
 
 //Method hooks
 const Menu = () => {
@@ -25,7 +25,7 @@ const Menu = () => {
           <li className="nav-item">
             <NavLink to={'/users'} className="nav-link">
             <div className="gap-3">
-              <PersonCircle color="red" size={20} className="my-2"/>
+              <People color="red" size={20} className="my-2"/>
               </div>
               Utilisateurs
             </NavLink>

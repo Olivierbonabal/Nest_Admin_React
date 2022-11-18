@@ -6,4 +6,5 @@ export class OrderItem {
         public price: number,
         public quantity: number
     ) {}
+    
 }
