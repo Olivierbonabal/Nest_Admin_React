@@ -33,12 +33,17 @@ const Users = () => {
 
   return (
     <Wrapper>
+
+      <div className="pt-3 pb-2 mb-3 border-bottom">
+        <Link to="/users/create" className="btn btn-sm btn-outline-primary">Ajouter un utilisateur</Link>
+      </div>
+
       <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>
             <tr>
               <th className="col">#</th>
-              <th className="col">Name</th>
+              <th className="col">Nom</th>
               <th className="col">Email</th>
               <th className="col">Role</th>
               <th className="col">Action</th>
@@ -62,12 +67,12 @@ const Users = () => {
                       <Link to={`/users/${user.id}/edit`}
                         className="btn btn-sm btn-outline-secondary">Editer</Link>
                     </div>
-                    
+
                     <div className="btn btn-link">
                       <a href="#" className="btn btn-sm btn-outline-danger" onClick={() => del(user.id)}>
                         Supprimer
                       </a>
-                      </div>
+                    </div>
                   </td>
 
                 </tr>

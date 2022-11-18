@@ -33,7 +33,7 @@ const Paginator = (props: {
           {/* </li> */}
         </div>
 
-        <div className="btn btn-link gap-3">
+        <div className="btn btn-link">
           {/* <li className="page-item"> */}
             <a href="#" className="page-link my-3" onClick={next}>
               page suivante

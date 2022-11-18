@@ -76,7 +76,7 @@ const Dashboard = () => {
         <Wrapper>
 
             <div className='my-3'>
-                <h2>Ventes du Jour (/commandes clients)</h2>
+                <h2>Ventes Journalieres (/commandes clients)</h2>
             </div>
             <div id="chart" />
 

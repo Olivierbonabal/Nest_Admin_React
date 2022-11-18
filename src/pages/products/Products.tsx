@@ -36,7 +36,7 @@ const Products = () => {
           to="/products/create"
           className=" my-3 btn btn-sm btn-outline-primary"
         >
-          Ajouter
+          Ajouter un Produit
         </Link>
       </div>
 

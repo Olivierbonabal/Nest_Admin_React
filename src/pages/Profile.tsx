@@ -157,7 +157,8 @@ class Profile extends Component<any> {
 
                 <hr />
                 <form onSubmit={this.updateInfo}>
-                    <div className="form-group">
+
+                    <div className="form-group w-75">
                         <label>Prénom</label>
                         <input type="text" className="form-control" name="first_name"
                             defaultValue={this.first_name = this.props.user.first_name}
@@ -165,7 +166,7 @@ class Profile extends Component<any> {
                         />
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group w-75">
                         <label>Nom</label>
                         <input type="text" className="form-control" name="last_name"
                             defaultValue={this.last_name = this.props.user.last_name}
@@ -173,7 +174,7 @@ class Profile extends Component<any> {
                         />
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group w-75">
                         <label>Email</label>
                         <input type="text" className="form-control" name="email"
                             defaultValue={this.email = this.props.user.email}
@@ -200,7 +201,7 @@ class Profile extends Component<any> {
                         />
                     </div>
 
-                    <button className="btn btn-outline-danger my-3">Sauvegarder</button>
+                    <button className="btn btn-outline-danger my-3" type="submit">Sauvegarder</button>
                 </form>
             </Wrapper>
         );

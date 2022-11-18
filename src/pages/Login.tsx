@@ -25,20 +25,16 @@ const Login = () => {
   }
   
   return (
-    // <div className="container">
-    //   <h1>Count {count}</h1>
-    //   <input
-    //     type="number"
-    //     onChange={(e) => setCount(parseInt(e.target.value))}
-    //   />
-    // </div>
+  
+    <div className="container">
     <main className="form-signin">
       <form onSubmit={submit}>
-        <h1 className="h3 my-3 fw-normal">Connexion</h1>
+
+        <h1 className="my-1 p-5">Connexion</h1>
 
         <input
           type="email"
-          className="form-control mt-3"
+          className="form-control mt-1"
           placeholder="Email"
           required
           onChange={(e) => setEmail(e.target.value)}
@@ -46,8 +42,8 @@ const Login = () => {
 
         <input
           type="password"
-          className="form-control mt-3"
-          placeholder="Password"
+          className="form-control my-3"
+          placeholder="Mot de Passe"
           required
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -56,11 +52,11 @@ const Login = () => {
           Se Connecter
         </button>
 
-        <p className="mt-2 p-5 text-dark">&copy; 2021–2022🚀OlivierBonabal</p>
+        <p className="mt-2 p-5 text-white">&copy; 2021–2022🚀OlivierBonabal</p>
       </form>
     </main>
+    </div>
   );
 };
 
 export default Login;
-

@@ -13,10 +13,12 @@ const UserCreate = () => {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    (async () => {
-      const { data } = await axios.get("roles");
-      setRoles(data);
-    })();
+    (
+      async () => {
+        const { data } = await axios.get("roles");
+        setRoles(data);
+      }
+    )();
   }, []);
 
   const submit = async (e: SyntheticEvent) => {
@@ -36,7 +38,7 @@ const UserCreate = () => {
     return <Navigate to={"/users"} />;
   }
 
-  
+
   return (
     <Wrapper>
       <form onSubmit={submit}>
@@ -80,7 +82,7 @@ const UserCreate = () => {
                   </option>
                 );
               })};
-              
+
             </select>
           </div>
 
