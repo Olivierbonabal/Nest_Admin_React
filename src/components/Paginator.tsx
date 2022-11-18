@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeftSquare, ArrowRightSquare } from 'react-bootstrap-icons';
 
 const Paginator = (props: {
-  
+
   page: number,
   lastPage: number,
   pageChanged: (page: number) => void
@@ -24,19 +24,24 @@ const Paginator = (props: {
     <nav>
       <ul className="pagination">
 
-        <li className="page-item">
-          <a href="#" className="page-link my-3" onClick={prev}>
-            <ArrowLeftSquare/>
-            page précédente
-          </a>
-        </li>
+        <div className="btn btn-link">
+          {/* <li className="page-item"> */}
+            <a href="#" className="page-link my-3" onClick={prev}>
+              <ArrowLeftSquare />
+              page précédente
+            </a>
+          {/* </li> */}
+        </div>
 
-        <li className="page-item">
-          <a href="#" className="page-link my-3" onClick={next}>
-            page suivante
-            <ArrowRightSquare/>
-          </a>
-        </li>
+        <div className="btn btn-link gap-3">
+          {/* <li className="page-item"> */}
+            <a href="#" className="page-link my-3" onClick={next}>
+              page suivante
+              <ArrowRightSquare />
+            </a>
+          {/* </li> */}
+        </div>
+
 
       </ul>
     </nav>
